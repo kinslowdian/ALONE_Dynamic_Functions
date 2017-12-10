@@ -1,0 +1,26 @@
+{
+	"set0":
+	{
+		"f": "dataTest0",
+		"p": "basicString"
+	},
+	
+	"set1":
+	{
+		"f": "dataTest1",
+		"p": {"level0": "attic", "level1": "bedroom", "level2": "kitchen"}
+	},
+	
+	"set2":
+	{
+		"f": "dataTest2",
+		"p": {"basic": "here", "advanced": ["scriptN", "scriptA"]}
+	},
+	
+	"arrayList":
+	[
+		{"x": 10},
+		{"x": 20},
+		{"x": 30}	
+	]
+}
