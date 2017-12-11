@@ -2,6 +2,7 @@
 
 /*https://coolors.co/545454-69747c-6baa75-84dd63-cbff4d*/
 
+/*VARS ADDED IN ROOT*/
 :root
 {
 	--box-size: 40%;
@@ -24,6 +25,7 @@ html, body
 
 	overflow: hidden;
 
+	/*VALUE IS CALLED IN var(--name) SYNTAX*/
 	background: var(--color-outer);
 }
 
@@ -46,6 +48,7 @@ html, body
 
 	transform: translate(-50%, -50%);
 
+	/*VALUE IS CALLED IN var(--name) SYNTAX*/
 	background: var(--color-inner);
 }
 
