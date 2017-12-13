@@ -5,9 +5,10 @@
 /*VARS ADDED IN ROOT*/
 :root
 {
-	--box-size: 40%;
+	--box-size: 60%;
 	--color-outer: #84DD63;
 	--color-inner: #CBFF4D;
+	--grid-colunn-width: 30%;
 }
 
 html, body
@@ -42,6 +43,10 @@ html, body
 	width: var(--box-size);
 	height: var(--box-size);
 
+	display: grid;
+	grid-template-columns: var(--grid-colunn-width) var(--grid-colunn-width) var(--grid-colunn-width);
+	grid-gap: 10px;
+
 	position: relative;
 
 	left: 50%; top: 50%;
@@ -50,6 +55,13 @@ html, body
 
 	/*VALUE IS CALLED IN var(--name) SYNTAX*/
 	background: var(--color-inner);
+}
+
+.box-inner
+{
+	background: #fff;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 
