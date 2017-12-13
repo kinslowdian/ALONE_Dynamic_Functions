@@ -49,6 +49,10 @@ function startTest()
 	window[data.f](data.p);
 	
 	jsonTests();
+
+	arrowFunction();
+
+	mapFunction();
 }
 
 function fix()
@@ -105,5 +109,23 @@ function dataTest2(json_param)
 	{
 		trace(window[json_param.advanced[i]]);
 	}
+}
+
+function arrowFunction()
+{
+	// ARROW FUNCTION (MINI FUNCTIONS)
+	var sum = (x, y) => {return x + y};
+
+	// CALL IN THE SAME WAY AS NORMAL FUNCTIONS
+	trace(sum(3, 3));
+}
+
+
+function mapFunction()
+{
+	// EDITS ARRAY TO TAKE EACH ITEM WITH ARROW FUNCTION AND MULTIPLIES IT BY 2
+	var edited = scriptA.map(x => x * 2);
+	
+	trace(edited);
 }
 
