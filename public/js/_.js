@@ -74,7 +74,7 @@ function jsonTests()
 {
 	trace(system.data.arrayList);
 	
-	for(var i in system.data.arrayList)
+	for(let i in system.data.arrayList)
 	{
 		trace(system.data.arrayList[i].x);
 	}
@@ -105,7 +105,7 @@ function dataTest2(json_param)
 	
 	trace(json_param.basic);
 	
-	for(var i in json_param.advanced)
+	for(let i in json_param.advanced)
 	{
 		trace(window[json_param.advanced[i]]);
 	}
@@ -114,7 +114,7 @@ function dataTest2(json_param)
 function arrowFunction()
 {
 	// ARROW FUNCTION (MINI FUNCTIONS)
-	var sum = (x, y) => {return x + y};
+	let sum = (x, y) => {return x + y};
 
 	// CALL IN THE SAME WAY AS NORMAL FUNCTIONS
 	trace(sum(3, 3));
@@ -124,7 +124,7 @@ function arrowFunction()
 function mapFunction()
 {
 	// EDITS ARRAY TO TAKE EACH ITEM WITH ARROW FUNCTION AND MULTIPLIES IT BY 2
-	var edited = scriptA.map(x => x * 2);
+	let edited = scriptA.map(x => x * 2);
 	
 	trace(edited);
 }
