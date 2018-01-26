@@ -56,6 +56,8 @@ function startTest()
 	mapFunction();
 
 	stringTest();
+
+	stringTestSafe();
 }
 
 function fix()
@@ -152,4 +154,15 @@ function outcomeL(num)
 function outcomeR(num)
 {
 	trace("RIGHT TRIGGER " + num);
+}
+
+function stringTestSafe()
+{
+	trace('stringTestSafe()');
+	let num = 1;
+	let direction = "L";
+	let logic_data = system.data.logic.check;
+	trace("activated === " + activated);
+	var l = new Function(logic_data);
+	trace("activated === " + activated);	
 }
