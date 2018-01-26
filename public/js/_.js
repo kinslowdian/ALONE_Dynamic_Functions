@@ -53,6 +53,8 @@ function startTest()
 	arrowFunction();
 
 	mapFunction();
+
+	stringTest();
 }
 
 function fix()
@@ -127,5 +129,15 @@ function mapFunction()
 	let edited = scriptA.map(x => x * 2);
 	
 	trace(edited);
+}
+
+
+
+function stringTest()
+{
+	let num = 1;
+	let direction = "L";
+	let logic_data = system.data.logic.check;
+	eval(logic_data);
 }
 
