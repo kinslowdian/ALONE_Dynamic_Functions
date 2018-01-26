@@ -135,9 +135,18 @@ function mapFunction()
 
 function stringTest()
 {
-	let num = 1;
-	let direction = "L";
+	let num = 0;
+	let direction = "R";
 	let logic_data = system.data.logic.check;
 	eval(logic_data);
 }
 
+function outcomeL(num)
+{
+	trace("LEFT TRIGGER " + num);
+}
+
+function outcomeR(num)
+{
+	trace("RIGHT TRIGGER " + num);
+}

@@ -26,6 +26,6 @@
 
 	"logic":
 	{
-		"check": "switch(num){ case 0:{ if(direction === 'R'){alert('RIGHT');} break;} case 1:{ if(direction === 'L'){alert('LEFT')} break;} }"
+		"check": "switch(num){ case 0:{ if(direction === 'R'){outcomeR(num);} break;} case 1:{ if(direction === 'L'){outcomeL(num);} break;} }"
 	}
 }
