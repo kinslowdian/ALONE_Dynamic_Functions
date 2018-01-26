@@ -13,6 +13,7 @@ var system;
 var scriptN = 2015;
 var scriptA = [16, 17, 22, 26, 27, 31, 32, 35];
 
+var activated = false;
 
 function pageLoad_init()
 {
@@ -138,7 +139,9 @@ function stringTest()
 	let num = 0;
 	let direction = "R";
 	let logic_data = system.data.logic.check;
+	trace("activated === " + activated);
 	eval(logic_data);
+	trace("activated === " + activated);
 }
 
 function outcomeL(num)
