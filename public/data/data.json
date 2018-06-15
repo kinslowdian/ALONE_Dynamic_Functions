@@ -27,5 +27,17 @@
 	"logic":
 	{
 		"check": "switch(num){ case 0:{ if(direction === 'R'){activated = true; outcomeR(num);} break;} case 1:{ if(direction === 'L'){activated = true; outcomeL(num);} break;} }"
-	}
+	},
+
+	"extra":
+	[
+		{"inst": "num0", "val0": 2006, "val1": "October", "val2": true},
+		{"inst": "num1", "val0": 2015, "val1": "June", "val2": true},
+		{"inst": "num2", "val0": 2018, "val1": "June", "val2": false}
+	],
+
+	"extra_custom":
+	[
+		{"instTarget": "num2", "funct": "bang", "param": 35}
+	]
 }

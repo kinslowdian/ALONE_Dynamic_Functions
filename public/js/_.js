@@ -1,6 +1,29 @@
 // DEBUG
 var trace = function(msg){ console.log(msg); };
 
+// BONUS
+class Power
+{
+	constructor()
+	{
+		this.found = false;
+	}
+
+	build(params)
+	{
+		this.val0 = params.val0;
+		this.val1 = params.val1;
+		this.val2 = params.val2;
+	}
+
+	bang(val)
+	{
+		this.found = true;
+	
+		trace("this.found == " + this.found + " " + val);
+	}
+}
+
 var go = "big";
 
 var data = {"f": "fixAdvanced", "p": "enemy0"};
@@ -14,6 +37,9 @@ var scriptN = 2015;
 var scriptA = [16, 17, 22, 26, 27, 31, 32, 35];
 
 var activated = false;
+
+// BONUS
+var extraList;
 
 function pageLoad_init()
 {
@@ -35,7 +61,10 @@ function data_loaded(data)
 	
 	trace(system);
 	
-	startTest();
+	// startTest();
+
+	// BONUS
+	bonus_create();
 }
 
 function startTest()
@@ -164,5 +193,37 @@ function stringTestSafe()
 	let logic_data = system.data.logic.check;
 	trace("activated === " + activated);
 	var l = new Function(logic_data);
+	l();
 	trace("activated === " + activated);	
+}
+
+// BONUS
+
+function bonus_create()
+{
+	trace("bonus_create();");
+
+	extraList = {};
+
+	for(var i in system.data.extra)
+	{
+		bonus_create_build(system.data.extra[i]);
+	}
+
+	// trace(extraList);
+
+	for(var j in system.data.extra_custom)
+	{
+		trace(extraList[system.data.extra_custom[j].instTarget]);
+
+		// FIRE A CLASS FUNCTION FROM JSON DATA
+
+		extraList[system.data.extra_custom[j].instTarget][system.data.extra_custom[j].funct](system.data.extra_custom[j].param);
+	}
+}
+
+function bonus_create_build(params)
+{
+	extraList[params.inst] = new Power();
+	extraList[params.inst].build(params);
 }
